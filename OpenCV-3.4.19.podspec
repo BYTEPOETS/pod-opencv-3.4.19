@@ -8,35 +8,17 @@
 
 Pod::Spec.new do |s|
   s.name             = 'OpenCV-3.4.19'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of OpenCV-3.4.19.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
+  s.version          = '0.0.1'
+  s.platform         = :ios, 12.0
+  s.summary          = 'OpenCV 3.4.19 framework for iOS.'
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Use the OpenCV 3.4.19 framework as pod dependency for iOS projects.
                        DESC
-
-  s.homepage         = 'https://github.com/BYTEPOETS/OpenCV-3.4.19'
+  s.homepage         = 'https://github.com/BYTEPOETS/pod-opencv-3.4.19'
   s.license          = { :type => '3-clause BSD License', :file => 'LICENSE' }
   s.author           = { 'Markus Friedl' => 'markus.friedl@bytepoets.com' }
   s.source           = { :git => 'https://github.com/BYTEPOETS/OpenCV-3.4.19.git', :tag => s.version.to_s }
+  s.source_files     = 'opencv2.framework/**'
 
-  s.ios.deployment_target = '10.0'
-
-  s.source_files = 'OpenCV-3.4.19/Classes/**/*'
-
-  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  s.swift_version = '5.0'
-
-  # Instructions specific for edge detection and OpenCV
-  s.preserve_paths = 'opencv2.framework'
-  s.xcconfig = { 'OTHER_LDFLAGS' => '-framework opencv2' }
-  s.vendored_frameworks = 'opencv2.framework'
-  s.frameworks = 'AVFoundation'
-  s.library = 'c++'
+  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 end

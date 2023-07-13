@@ -20,6 +20,19 @@ it, simply add the following line to your Podfile:
 pod 'OpenCV-3.4.19'
 ```
 
+If you want to use this dependency in a podspec file, add the following lines to your podspec file:
+```ruby
+s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+s.swift_version = '5.0'
+
+# Instructions specific for edge detection and OpenCV
+s.preserve_paths = 'OpenCV-3.4.19/opencv2.framework'
+s.xcconfig = { 'OTHER_LDFLAGS' => '-framework opencv2' }
+s.vendored_frameworks = 'OpenCV-3.4.19/opencv2.framework'
+s.frameworks = 'AVFoundation'
+s.library = 'c++'
+```
+
 ## Author
 
 Markus Friedl, markus.friedl@bytepoets.com
