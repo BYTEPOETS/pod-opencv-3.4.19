@@ -17,7 +17,7 @@ Use the OpenCV 3.4.19 framework as pod dependency for iOS projects.
   s.homepage         = 'https://github.com/BYTEPOETS/pod-opencv-3.4.19'
   s.license          = { :type => '3-clause BSD License', :file => 'LICENSE' }
   s.author           = { 'Markus Friedl' => 'markus.friedl@bytepoets.com' }
-  s.source           = { :git => 'https://github.com/BYTEPOETS/OpenCV-3.4.19.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/BYTEPOETS/pod-opencv-3.4.19.git', :tag => s.version.to_s }
   s.source_files     = 'opencv2.framework/**'
 
   s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
