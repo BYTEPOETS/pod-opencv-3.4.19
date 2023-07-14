@@ -20,6 +20,6 @@ Use the OpenCV 3.4.19 framework as pod dependency for iOS projects.
   s.source           = { :git => 'https://github.com/BYTEPOETS/pod-opencv-3.4.19.git', :tag => s.version.to_s }
   s.source_files     = 'opencv2.framework/**'
   s.vendored_frameworks = 'opencv2.framework'
-  
+
   s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 end
